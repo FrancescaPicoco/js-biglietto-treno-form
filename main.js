@@ -1,7 +1,9 @@
 
+document.body.style.backgroundColor = "#303030";
+document.body.style.color = "#999999";
 
 let txt = document.getElementById("main");
-            txt.style.textAlign = "center";
+            txt.style.textAlign = "center";      
 
 
 //document.getElementsByClassName("row").style.marginTop = "2rem";
@@ -17,21 +19,28 @@ function shared(confirm) {
 
 let fullprice = (value1 * 0.21);
 if ( isNaN (value2) || isNaN(value1) ){
-    document.getElementById("hide-cont").innerHTML = `Error`;
+    document.getElementById("error").innerHTML = `ERROR`;
     console.log(`i caratteri non sono numerici`);   
 }else if( value2 < 18) {
     const saleUnder=((value1 * 20) / 100);
+    document.getElementById("hide-cont").style.display = "block";
     document.getElementById("price").innerHTML = `${saleUnder}`;
-    document.getElementById("offert").innerHTML = `Biglietto scontato under18`;
+    document.getElementById("offert").innerHTML = `Biglietto -20%`;
+    document.getElementById("nome").innerHTML = `${value0}`;
     console.log("costo scontato" , saleUnder);
     } else if( value2 > 65) {
     const saleOver=((value1 * 40) / 100);
+    document.getElementById("hide-cont").style.display = 'block';
     document.getElementById("price").innerHTML = `${saleOver}`;
-    document.getElementById("offert").innerHTML = `Biglietto scontato over65`;
+    document.getElementById("offert").innerHTML = `Biglietto -40%`;
+    document.getElementById("nome").innerHTML = `${value0}`;
     console.log("costo scontato" , saleOver);
     }
     else {
-    document.getElementById("mex").innerHTML = `Prezzo: ${fullprice}`;
+        document.getElementById("hide-cont").style.display = 'block';
+    document.getElementById("price").innerHTML = `${fullprice}`;
+    document.getElementById("offert").innerHTML = `Biglietto Base`;
+    document.getElementById("nome").innerHTML = `${value0}`;
     console.log("prezzo pieno" , fullprice);
     }
 }

@@ -12,3 +12,6 @@ body{
 #smll-square{
     border: 1px solid black;
 }
+#hide-cont{
+    display: none;
+}
