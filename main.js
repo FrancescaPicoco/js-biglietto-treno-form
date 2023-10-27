@@ -6,7 +6,7 @@ let txt = document.getElementById("container");
             txt.style.textAlign = "center";
 
 
-document.getElementById("").style.marginTop = "2rem";
+document.getElementsByClassName("row").style.marginTop = "2rem";
 //document.getElementById("container").style.lineHeight = "3";
 
 function shared(confirm) {
