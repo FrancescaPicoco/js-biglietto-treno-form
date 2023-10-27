@@ -8,5 +8,7 @@ function shared(confirm) {
     console.log(value);
     var value = document.getElementById('km').value;
     console.log(value);
+    var value = document.getElementById('under').value;
+    console.log=(value);
 }
 
