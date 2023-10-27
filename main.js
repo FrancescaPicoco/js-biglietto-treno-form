@@ -2,10 +2,12 @@
 
 //document.getElementById('nome').value;
 //document.getElementById('km').value;
-let txt = document.getElementById("main");
+let txt = document.getElementById("container");
             txt.style.textAlign = "center";
 
-document.getElementById("main").style.lineHeight = "3";
+
+document.getElementById("").style.marginTop = "2rem";
+//document.getElementById("container").style.lineHeight = "3";
 
 function shared(confirm) {
     var value =document.getElementById('nome').value;
