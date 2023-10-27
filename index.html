@@ -40,9 +40,9 @@
                     <div class="col-3">
                         <select name="eta" id="old">
                             <option value="choose">Scegli il tuo range</option>
-                            <option value="under18">Under18</option>
-                            <option value="maggiorenne">From 18 to 65</option>
-                            <option value="over65">Over65</option>
+                            <option value="17">Under18</option>
+                            <option value="18">From 18 to 65</option>
+                            <option value="66">Over65</option>
                         </select>
                     </div>
                 </div>
@@ -56,6 +56,40 @@
                 </div>
             </div>
         </div>
+        <div class="container d-n" id="hide-cont">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Il tuo Biglietto</h2>
+                </div>
+                <div class="row border-dark">
+                    <div class="row">
+                        <div class="col-3">
+                            <span class="fw-bold">Dettagli Passeggero</span>
+                        </div>
+                    </div>
+                    <div class="row" id="square">
+                        <div class="col-4" id="smll-square">
+                            <h6>NOME PASSEGGERO</h6>
+                            <span id="nome"><</span>
+                        </div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-3"><h5 class="fw-bold">Offerta</h5></div>
+                                <div class="col-3"><h5 class="fw-bold">Carrozza</h5></div>
+                                <div class="col-3"><h5 class="fw-bold">Codice CP</h5></div>
+                                <div class="col-3"><h5 class="fw-bold">Costo Biglietto</h5></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"><p id="offert"></p></div>
+                                <div class="col-3"><p>5</p></div>
+                                <div class="col-3"><p>92911</p></div>
+                                <div class="col-3"><p id="price"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -63,28 +97,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-
-<!--
-
-<div id="up">
-    <h1>Calcola il prezzo del tuo Biglietto</h1>
- </div>
- <div id="labels">
-     <h5 class="d-inline">Nome e Cognome</h5>
-     <h5 class="d-inline ms-5 me-5">Km da percorrere</h5>
-     <h5 class="d-inline">Fascia d'età</h5>
- </div>
- <div id="datas">   
-     <input type="text" id="nome" value="">
-     <input type="text" id="km" value="">
-     <select name="eta" id="old">
-         <option value="choose">Scegli il tuo range</option>
-         <option value="under18">Under18</option>
-         <option value="maggiorenne">From 18 to 65</option>
-         <option value="over65">Over65</option>
-     </select>
- </div>        
- <div>
-     <button id="confirm" onclick="shared(confirm)">conferma</button> 
-     <button id="cancel">annulla</button>
- </div>    -->

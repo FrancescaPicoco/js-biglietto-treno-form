@@ -6,3 +6,9 @@
 body{
     font-family:  'Roboto', sans-serif;
 }
+#square{
+    border: 1px solid black;
+}
+#smll-square{
+    border: 1px solid black;
+}
