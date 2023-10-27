@@ -12,7 +12,7 @@ function shared(confirm) {
     console.log(value);
     var value = document.getElementById('km').value;
     console.log(value);
-    var value = document.getElementById('under').value;
+    var value = document.getElementById('old').value;
     console.log=(value);
 }
 
