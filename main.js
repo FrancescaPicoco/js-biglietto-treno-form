@@ -5,6 +5,7 @@
 
 function shared(confirm) {
     var value =document.getElementById('nome').value;
+    console.log(value);
     var value = document.getElementById('km').value;
     console.log(value);
 }
