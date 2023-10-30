@@ -1,46 +1,48 @@
-
 document.body.style.backgroundColor = "#303030";
 document.body.style.color = "#999999";
+document.getElementById("main").style.marginTop = "30px";
+document.querySelector("#hide-cont").style.marginTop = "30px";
 
-let txt = document.getElementById("main");
-            txt.style.textAlign = "center";      
+document.querySelector("#nome").classList.add("borderRadious");
+document.querySelector("#km").classList.add("borderRadious");
+document.querySelector("#old").classList.add("borderRadious");
+document.querySelector("#confirm").classList.add("borderRadious");
+document.querySelector("#cancel").classList.add("borderRadious");
+//document.querySelector(".brd").classList.add("borderRadious");
+//document.querySelector(".brd").classList[1].add("borderRadious"); 
 
-
-//document.getElementsByClassName("row").style.marginTop = "2rem";
-//document.getElementById("container").style.lineHeight = "3";
-
+//document.getElementById("cancel").addEventListener("click", function () {
+function clean(cancel){  
+    document.getElementById("bho").reset();
+    document.getElementById("bho2").reset();
+} 
+//document.getElementById('confirm').addEventListener("click", function () {
 function shared(confirm) {
     const value0 =document.getElementById('nome').value;
-    console.log(value0);
     let value1 = document.getElementById('km').value;
-    console.log(value1);
     const value2 = document.getElementById('old').value;
-    console.log(value2);
 
-let fullprice = (value1 * 0.21);
-if ( isNaN (value2) || isNaN(value1) ){
-    document.getElementById("error").innerHTML = `ERROR`;
-    console.log(`i caratteri non sono numerici`);   
-}else if( value2 < 18) {
-    const saleUnder=((value1 * 20) / 100);
-    document.getElementById("hide-cont").style.display = "block";
-    document.getElementById("price").innerHTML = `${saleUnder}`;
-    document.getElementById("offert").innerHTML = `Biglietto -20%`;
-    document.getElementById("nome").innerHTML = `${value0}`;
-    console.log("costo scontato" , saleUnder);
-    } else if( value2 > 65) {
-    const saleOver=((value1 * 40) / 100);
-    document.getElementById("hide-cont").style.display = 'block';
-    document.getElementById("price").innerHTML = `${saleOver}`;
-    document.getElementById("offert").innerHTML = `Biglietto -40%`;
-    document.getElementById("nome").innerHTML = `${value0}`;
-    console.log("costo scontato" , saleOver);
-    }
-    else {
-        document.getElementById("hide-cont").style.display = 'block';
-    document.getElementById("price").innerHTML = `${fullprice}`;
-    document.getElementById("offert").innerHTML = `Biglietto Base`;
-    document.getElementById("nome").innerHTML = `${value0}`;
-    console.log("prezzo pieno" , fullprice);
-    }
+    let fullprice = (value1 * 0.21);
+
+    if ( isNaN (value2) || isNaN(value1) ){
+        document.getElementById("error").innerHTML = `ERROR`;
+        console.log(`i caratteri non sono numerici`);   
+        }else if( value2 < 18) {
+            const saleUnder=((value1 * 20) / 100);
+            document.getElementById("price").innerHTML = `${saleUnder}`;
+            document.getElementById("offert").innerHTML = `Biglietto -20%`; 
+            console.log("costo scontato" , saleUnder);
+    
+        }else if( value2 > 65) {
+            const saleOver=((value1 * 40) / 100);
+            document.getElementById("price").innerHTML = `${saleOver}`;
+            document.getElementById("offert").innerHTML = `Biglietto -40%`;
+            console.log("costo scontato" , saleOver);       
+        }else {
+            document.getElementById("price").innerHTML = `${fullprice}`;
+            document.getElementById("offert").innerHTML = `Biglietto Base`;
+            console.log("prezzo pieno" , fullprice);
+            }
+        document.getElementById("hide-cont").style.display = "block";
+        document.getElementById("nome").innerHTML = `${value0}`;
 }
