@@ -3,6 +3,8 @@ document.body.style.color = "#999999";
 document.getElementById("main").style.marginTop = "30px";
 document.querySelector("#hide-cont").style.marginTop = "30px";
 
+let err =document.getElementById('error')
+
 document.querySelector("#nome").classList.add("borderRadious");
 document.querySelector("#km").classList.add("borderRadious");
 document.querySelector("#old").classList.add("borderRadious");
@@ -12,12 +14,11 @@ document.querySelector("#cancel").classList.add("borderRadious");
 //document.querySelector(".brd").classList[1].add("borderRadious"); 
 
 //document.getElementById("cancel").addEventListener("click", function () {
-function clean(cancel){  
-    document.getElementById("bho").reset();
-    document.getElementById("bho2").reset();
+function clean(){  
+    document.getElementById("delete").reset();
 } 
 //document.getElementById('confirm').addEventListener("click", function () {
-function shared(confirm) {
+function shared() {
     const value0 =document.getElementById('nome').value;
     let value1 = document.getElementById('km').value;
     const value2 = document.getElementById('old').value;
@@ -25,8 +26,7 @@ function shared(confirm) {
     let fullprice = (value1 * 0.21);
 
     if ( isNaN (value2) || isNaN(value1) ){
-        document.getElementById("error").innerHTML = `ERROR`;
-        console.log(`i caratteri non sono numerici`);   
+        err.classList.remove('d-none');
         }else if( value2 < 18) {
             const saleUnder=((value1 * 20) / 100);
             document.getElementById("price").innerHTML = `${saleUnder}`;
